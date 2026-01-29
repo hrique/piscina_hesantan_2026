@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/28 19:26:44 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/28 19:40:22 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <unistd.h>
 
-void	ft_is_negative(int n)
+int	ft_str_is_uppercase(char *str)
 {
-	char	letter_n;
-	char	letter_p;
+	int	i;
 
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
+	i = 0;
+	if (str[i] == '\0')
+		return (1);
+	while (str[i] != '\0')
 	{
-		write(1, &letter_n, 1);
+		if ((str[i] < 65) || (str[i] > 90))
+			return (0);
+		i++;
 	}
-	else if (n >= 0)
-	{
-		write(1, &letter_p, 1);
-	}
+	return (1);
 }
-//
-//int	main(void)
-//{
-//	ft_is_negative (-5);
-//	return (0);
-//}
+
+/*int	main(void)
+{
+	char text[6] = "AAA1";
+	int	i;
+
+	i = ft_str_is_uppercase(text) + '0';
+	write(1, &i, 1);
+	return (0);
+}*/

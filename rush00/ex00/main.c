@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 14:23:50 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 16:58:30 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/16 17:24:50 by jamsilva          #+#    #+#             */
+/*   Updated: 2026/01/18 16:59:48 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	rush(int x, int y);
 
-void	ft_print_alphabet(void)
+int	main(void)
 {
-	char	letra;
-
-	letra = 'a';
-	while (letra <= 'z')
-	{
-		write(1, &letra, 1);
-		letra++;
-	}
+	rush(5, 3);
+	return (0);
 }
-//
-//int	main(void)
-//{
-//	ft_print_alphabet();
-//	return (0);
-//}

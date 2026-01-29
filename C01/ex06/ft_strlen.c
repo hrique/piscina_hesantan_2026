@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/26 17:26:49 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/27 15:09:02 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_is_negative(int n)
+int	ft_strlen(char *str)
 {
-	char	letter_n;
-	char	letter_p;
+	int	i;
 
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
+	i = 0;
+	while(str[i] != '\0')
 	{
-		write(1, &letter_n, 1);
+		i++;
 	}
-	else if (n >= 0)
-	{
-		write(1, &letter_p, 1);
-	}
+	return (i);
 }
-//
-//int	main(void)
-//{
-//	ft_is_negative (-5);
-//	return (0);
-//}
+
+/*int	main(void)
+{
+	char texto[] = "teste";
+	int	count;
+
+	count = ft_strlen(texto);
+	printf("%d", count);
+	return (0);
+}*/

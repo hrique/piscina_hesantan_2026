@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 14:23:50 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 16:58:30 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/19 12:36:20 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/29 18:10:24 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+void	ft_ft(int *nbr)
 {
-	char	letra;
-
-	letra = 'a';
-	while (letra <= 'z')
-	{
-		write(1, &letra, 1);
-		letra++;
-	}
+	*nbr = 42;
 }
-//
-//int	main(void)
-//{
-//	ft_print_alphabet();
-//	return (0);
-//}
+
+int	main(void)
+{
+	int	nbr;
+	int	dez;
+	int	uni;
+
+	nbr = 0;
+	ft_ft(&nbr);
+	dez = (nbr / 10 + '0');
+	uni = (nbr % 10 + '0');
+	write(1, &dez, 1);
+	write(1, &uni, 1);
+	write(1, "\n", 1);
+	return (0);
+}

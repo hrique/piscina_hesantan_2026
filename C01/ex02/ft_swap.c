@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/19 18:55:40 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/27 18:56:32 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_is_negative(int n)
+void	ft_swap(int *a, int *b)
 {
-	char	letter_n;
-	char	letter_p;
+	int	temp;
 
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
-	{
-		write(1, &letter_n, 1);
-	}
-	else if (n >= 0)
-	{
-		write(1, &letter_p, 1);
-	}
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
-//
-//int	main(void)
-//{
-//	ft_is_negative (-5);
-//	return (0);
-//}
+
+/*int	main(void)
+{
+	int	n1;
+	int	n2;
+
+	n1 = 4 + '0';
+	n2 = 5 + '0';
+	write(1, "antes: ", 7);
+	write(1, &n1, 1);
+	write(1, &n2, 1);
+	write(1, "\n", 1);
+	ft_swap(&n1, &n2);
+	write(1, "depois: ", 8);
+	write(1, &n1, 1);
+	write(1, &n2, 1);
+	write(1, "\n", 1);
+	return (0);
+}*/

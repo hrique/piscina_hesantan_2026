@@ -1,36 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/21 15:54:56 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/22 12:21:57 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_comma_spc(char c, char d, char u)
 {
-	char	letter_n;
-	char	letter_p;
-
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
+	if (!(c == '7' && d == '8' && u == '9'))
 	{
-		write(1, &letter_n, 1);
+		write(1, ", ", 2);
 	}
-	else if (n >= 0)
+}
+
+void	ft_print_comb(void)
+{
+	int	c;
+	int	d;
+	int	u;
+
+	c = '0';
+	while (c <= '7')
 	{
-		write(1, &letter_p, 1);
+		d = c + 1;
+		while (d <= '8')
+		{
+			u = d + 1;
+			while (u <= '9')
+			{
+				write(1, &c, 1);
+				write(1, &d, 1);
+				write(1, &u, 1);
+				ft_comma_spc(c, d, u);
+				u++;
+			}
+			d++;
+		}
+		c++;
 	}
 }
 //
 //int	main(void)
 //{
-//	ft_is_negative (-5);
+//	ft_print_comb();
 //	return (0);
 //}

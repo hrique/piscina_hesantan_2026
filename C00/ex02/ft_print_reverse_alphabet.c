@@ -6,13 +6,13 @@
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:24:04 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/16 17:29:00 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:32:57 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char	letra;
 
@@ -23,10 +23,9 @@ void	ft_print_alphabet(void)
 		letra--;
 	}
 }
-/*
-int	main(void)
-{
-	ft_print_alphabet();
-	return (0);
-}
-*/
+
+//int	main(void)
+//{
+//	ft_print_reverse_alphabet();
+//	return (0);
+//}

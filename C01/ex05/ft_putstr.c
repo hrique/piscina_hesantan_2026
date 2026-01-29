@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/20 14:14:10 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/26 17:26:00 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_putstr(char *str)
 {
-	char	letter_n;
-	char	letter_p;
+	int	i;
 
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, &letter_n, 1);
+		i++;
 	}
-	else if (n >= 0)
-	{
-		write(1, &letter_p, 1);
-	}
+	write(1, str, i);
 }
-//
-//int	main(void)
-//{
-//	ft_is_negative (-5);
-//	return (0);
-//}
+
+/*int	main(void)
+{
+	ft_putstr("Ola Mundo");
+	return (0);
+}*/

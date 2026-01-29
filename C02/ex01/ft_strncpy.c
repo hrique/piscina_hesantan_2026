@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hesantan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:39:23 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/21 15:35:35 by hesantan         ###   ########.fr       */
+/*   Created: 2026/01/28 15:04:40 by hesantan          #+#    #+#             */
+/*   Updated: 2026/01/28 15:53:39 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+//#include <unistd.h>
 
-void	ft_is_negative(int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char	letter_n;
-	char	letter_p;
+	unsigned int	i;
 
-	letter_n = 'N';
-	letter_p = 'P';
-	if (n < 0)
+	i = 0;
+	while ((i < n) && (src[i] != '\0'))
 	{
-		write(1, &letter_n, 1);
+		dest[i] = src[i];
+		i++;
 	}
-	else if (n >= 0)
+	while (i < n)
 	{
-		write(1, &letter_p, 1);
+		dest[i] = '\0';
+		i++;
 	}
+	return (dest);
 }
-//
-//int	main(void)
-//{
-//	ft_is_negative (-5);
-//	return (0);
-//}
+
+/*int	main(void)
+{
+	char	dest[6];
+	char	*src;
+	unsigned int	i;
+
+	i = 0;
+	src = "abc";
+	while (src[i] != '\0')
+	{
+		i++;
+	}
+	ft_strncpy(dest, src, i);
+	write(1, dest, i);
+	return (0);
+}*/
