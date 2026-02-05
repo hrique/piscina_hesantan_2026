@@ -6,11 +6,9 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:38:43 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/02 16:11:11 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/04 14:44:32 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -32,7 +30,9 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
 	char	text1[20] = "abacate";
 	char	text2[] = "banana";

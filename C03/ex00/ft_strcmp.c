@@ -6,11 +6,9 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:37:40 by hesantan          #+#    #+#             */
-/*   Updated: 2026/01/31 18:50:27 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/05 15:29:54 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -24,10 +22,12 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
-	char	txt1[] = "a";
-	char	txt2[] = "d";
+	char	txt1[] = "aaa";
+	char	txt2[] = "aaa";
 	int		res;
 
 	res = ft_strcmp(txt1, txt2);

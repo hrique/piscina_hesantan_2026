@@ -6,7 +6,7 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:38:59 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/02 19:08:50 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/04 14:45:52 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(void)
 	char	text2[] = "zzzzz";
 	unsigned int	n;
 
-	n = 6;
+	n = 2;
 	ft_strncat(text1, text2, n);
 	printf("%s", text1);
 	return (0);

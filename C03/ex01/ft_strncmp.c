@@ -6,7 +6,7 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 14:38:12 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/02 18:51:07 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/04 14:43:03 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 int	main(void)
 {
-	char	text1[10] = "aaabbbccc";
-	char	text2[13] = "aazabbbccceee";
+	char	text1[10] = "aaaabbbccc";
+	char	text2[13] = "aaaabbbccceee";
 	unsigned int	n;
 	int		res;
 
