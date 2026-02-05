@@ -6,7 +6,7 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 10:24:10 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/03 18:59:55 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/04 15:12:28 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_iterative_factorial(int nb)
 
 	num = 1;
 	if (nb < 0)
-		return (0);	
+		return (0);
 	while (nb > 1)
 	{
 		num = num * nb;
@@ -51,7 +51,6 @@ void	ft_putnbr(int nb)
 	}
 }
 
-
 int	main(void)
 {
 	int	num;
@@ -62,4 +61,3 @@ int	main(void)
 	ft_putnbr(result);
 	return (0);
 }*/
-
