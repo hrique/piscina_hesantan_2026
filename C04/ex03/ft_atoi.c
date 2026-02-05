@@ -6,23 +6,9 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:28:58 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/02 19:32:50 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/04 18:20:20 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_is_valid(char x)
-{
-	int	num;
-
-	num = 0;
-	if (x == ' ' || (x >= 9 && x <= 13) || x == '+' || x == '-')
-		num = 0;
-	else if (x >= '0' && x <= '9')
-		num = 0;
-	else
-		num = 1;
-	return (num);
-}
 
 int	ft_atoi(char *str)
 {
@@ -33,16 +19,17 @@ int	ft_atoi(char *str)
 	i = 0;
 	neg = 1;
 	num = 0;
-	while (str[i] != '\0' && ft_is_valid(str[i]) == 0)
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-		{
 			neg = neg * -1;
-		}
-		else if (str[i] >= '0' && str[i] <= '9')
-		{
-			num = (num * 10) + (str[i] - '0');
-		}
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
 	num = num * neg;

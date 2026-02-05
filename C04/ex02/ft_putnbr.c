@@ -6,7 +6,7 @@
 /*   By: hesantan <hesantan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:32:05 by hesantan          #+#    #+#             */
-/*   Updated: 2026/02/02 19:31:17 by hesantan         ###   ########.fr       */
+/*   Updated: 2026/02/05 14:49:20 by hesantan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr(int nb)
 {
+	char	x;
+
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -25,22 +27,16 @@ void	ft_putnbr(int nb)
 		nb = nb * (-1);
 	}
 	if (nb > 9)
-	{
 		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-	{
-		nb = nb + '0';
-		write(1, &nb, 1);
-	}
+	x = (nb % 10) + '0';
+	write(1, &x, 1);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int	n;
 
-	n = -2147483648;
+	n = 2147;
 	ft_putnbr(n);
 	return (0);
-}*/
+}
